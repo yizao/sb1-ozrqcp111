@@ -1,0 +1,20 @@
+{
+  "name": "qiankun-microfrontend-project",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "main-app",
+    "micro-app1",
+    "micro-app2"
+  ],
+  "scripts": {
+    "start": "npm run start:main & npm run start:micro1 & npm run start:micro2",
+    "start:main": "cd main-app && npm start",
+    "start:micro1": "cd micro-app1 && npm start",
+    "start:micro2": "cd micro-app2 && npm start",
+    "install:all": "npm install && npm run install:main && npm run install:micro1 && npm run install:micro2",
+    "install:main": "cd main-app && npm install",
+    "install:micro1": "cd micro-app1 && npm install",
+    "install:micro2": "cd micro-app2 && npm install"
+  }
+}
